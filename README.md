@@ -29,7 +29,7 @@
 *No arquivo App.js ou Index.js*
 - [x] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
-### exemplo no index: Provider vem do 'react-redux' e store do caminho "redux/store/index"
+### Exemplo no index: Provider vem do 'react-redux' e store do caminho "redux/store/index"
 ```import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -49,7 +49,7 @@ ReactDOM.render(
 - [x] Importe o rootReducer e crie a store
 - [x] instale o redux-devtoolsextension: "npm install --save redux-devtools-extension" - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
-### exemplo:
+### Exemplo:
 ```import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -62,7 +62,7 @@ export default store;
 
 *Na pasta reducers:*
 - [x] extruture o index.js para ser um rootReducer e combinar reducers criados
-### exemplo:
+### Exemplo:
 ```import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
 import reducer2 from './reducer2';
@@ -79,7 +79,7 @@ export default rootReducer;
 - [x] crie os actionTypes
 - [x] crie os actions creators necessários
 
-### exemplo de uma action:
+### Exemplo de uma action:
 ```export const SET_LOGIN = 'SET_LOGIN';
 
 export const setLogin = (payload) => ({
@@ -92,7 +92,7 @@ export const setLogin = (payload) => ({
 - [x] crie a função mapDispatchToProps
 - [x] faça o connect
 
-### exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
+### Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
 ```const mapDispatchToProps = (dispatch) => ({
   dispatchSetValue: (email) => dispatch(setLogin(email)),
 });
