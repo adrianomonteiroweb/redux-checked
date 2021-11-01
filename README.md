@@ -1,44 +1,59 @@
-# Checklist do react-redux
+# Checklist React-Redux
 
 *Antes de começar*
-- [ ] pensar como será o *formato* do seu estado global
-- [ ] pensar quais actions serão necessárias na sua aplicação
+- [x] Definir como o estado global será iniciado
+- [x] Definir as actions iniciais para o projeto
 
-*Instalação*
-- [x] npx create-react-app my-app-redux;
-- [x] npm install --save redux react-redux;
-- [x] npm install.
+*Instalando o react-redux em seu projeto*
+- [x] npm install react-redux
 
-*Criar dentro do diretório src:*
-- [x] diretório actions;
-- [x] diretório reducers;
-- [x] diretório store.
+*Em o redux comum, use*
+- [x] npm install @reduxjs/toolkit
 
-*Criar dentro do diretório actions:*
-- [x] arquivo index.js.
+*Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
+- [x] Use o comando: "mkdir src/redux" para criar a pasta "redux" dentro de "src"
+- [x] Use o comando: "mkdir src/redux/actions" para criar a pasta "actions" dentro de "src/redux"
+- [x] Use o comando: "mkdir src/redux/reducers" para criar a pasta "reducers" dentro de "src/redux"
+- [x] Use o comando: "mkdir src/redux/store" para criar a pasta "store" dentro de "src/redux"
 
-*Criar dentro do diretório reducers:*
-- [x] arquivo index.js.
+*Na pasta actions, crie o arquivo index.js*
+- [x] Use o comando:  "touch src/redux/actions/index.js", se preferir
 
-*Criar dentro do diretório store:*
-- [x] arquivo index.js.
+*Na pasta reducers, crie o arquivo index.js, além dos reducers iniciais que precisar*
+- [x] Use o comando:  "touch src/redux/reducers/index.js", se preferir
+- [x] Use o comando:  "touch src/redux/reducers/outroReducer.js", se preferir
 
-*No arquivo App.js:*
-- [x] definir o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
+*Na pasta store, crie o arquivo index.js*
+- [x] Use o comando:  "touch src/redux/store/index.js", se preferir
+
+*No arquivo App.js ou Index.js*
+- [x] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
 *No arquivo store/index.js:*
-- [x] importar o rootReducer e criar a store
-- [x] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+- [x] Importe o rootReducer e crie a store
+- [x] Configure o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
 *Na pasta reducers:*
-- [x] criar os reducers necessários
-- [x] configurar os exports do arquivo index.js
+- [x] extruture o index.js para ser um rootReducer
+### exemplo:
+<script>
+import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
+import reducer1 from './reducer1';
+import reducer2 from './reducer2';
+
+const rootReducer = combineReducers({ // combinando dois reducers importados do mesmo diretório
+  reducer1,
+  reducer2,
+});
+
+export default rootReducer;
+</script>
 
 *Na pasta actions:*
-- [ ] criar os actionTypes, por exemplo: `const ADD_TO_CART = 'ADD_TO_CART';`
-- [ ] criar os actions creators necessários
+- [x] crie os actionTypes. exe: `const ADD_TO_CART = 'ADD_TO_CART';`
+- [x] crie os actions creators necessários
 
 *Nos componentes:*
-- [ ] criar a função mapStateToProps
-- [ ] criar a função mapDispatchToProps
-- [ ] fazer o connect
+- [x] crie a função mapStateToProps
+- [x] crie a função mapDispatchToProps
+- [x] faça o connect
