@@ -1,8 +1,8 @@
 # Checklist React-Redux
 
 *Antes de começar*
-- [] Definir como o estado global será iniciado
-- [] Definir as actions iniciais para o projeto
+- [ ] Definir como o estado global será iniciado
+- [ ] Definir as actions iniciais para o projeto
 
 *Instalando o react-redux em seu projeto*
 - [ ] npm install react-redux
