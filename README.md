@@ -36,8 +36,7 @@
 *Na pasta reducers:*
 - [x] extruture o index.js para ser um rootReducer
 ### exemplo:
-<script>
-import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
+```import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
 import reducer2 from './reducer2';
 
@@ -46,8 +45,7 @@ const rootReducer = combineReducers({ // combinando dois reducers importados do 
   reducer2,
 });
 
-export default rootReducer;
-</script>
+export default rootReducer;```
 
 *Na pasta actions:*
 - [x] crie os actionTypes. exe: `const ADD_TO_CART = 'ADD_TO_CART';`
