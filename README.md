@@ -7,9 +7,6 @@
 *Instalando o react-redux em seu projeto*
 - [ ] npm install react-redux
 
-*ou*
-- [ ] npm install @reduxjs/toolkit
-
 *Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
 - [ ] Use o comando: "mkdir src/redux" para criar a pasta "redux" dentro de "src"
 - [ ] Use o comando: "mkdir src/redux/actions" para criar a pasta "actions" dentro de "src/redux"
@@ -60,8 +57,8 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 export default store;
 ```
 
-*Na pasta reducers:*
-- [ ] extruture o index.js para ser um rootReducer e combinar reducers criados
+*Na pasta redux/reducers:*
+- [ ] estruture o index.js para ser um rootReducer e combinar reducers criados
 ### Exemplo:
 ```import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
@@ -90,7 +87,7 @@ export const setLogin = (payload) => ({
 *Nos componentes:*
 - [ ] crie a função mapStateToProps
 - [ ] crie a função mapDispatchToProps
-- [ ] faça o connect
+- [ ] Utilize o connect
 
 ### Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
 ```const mapDispatchToProps = (dispatch) => ({
@@ -99,5 +96,5 @@ export const setLogin = (payload) => ({
 
 const mapStateToProps = (state) => ({ email: state.user.email });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 ```
