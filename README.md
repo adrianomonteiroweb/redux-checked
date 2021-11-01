@@ -154,3 +154,5 @@ const mapStateToProps = (state) => ({ email: state.user.email });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 ```
+
+*Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
