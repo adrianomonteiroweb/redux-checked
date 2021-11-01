@@ -27,7 +27,8 @@
 - [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
 ### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index"
-```import React from 'react';
+```
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
@@ -47,7 +48,8 @@ ReactDOM.render(
 - [ ] instale o redux-devtoolsextension: "npm install --save redux-devtools-extension" - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
 ### Exemplo:
-```import { createStore, applyMiddleware } from 'redux';
+```
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from '../redux/reducers';
@@ -60,7 +62,8 @@ export default store;
 *Na pasta redux/reducers:*
 - [ ] estruture o index.js para ser um rootReducer e combinar reducers criados
 ### Exemplo de uso do combineReducers:
-```import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
+```
+import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
 import reducer2 from './reducer2';
 
@@ -73,7 +76,8 @@ export default rootReducer;
 ```
 
 ### Exemplo de reducer:
-```import { SET_LOGIN } from '../actions'; // importa a action
+```
+import { SET_LOGIN } from '../actions'; // importa a action
 
 const INITIAL_STATE = { // inicia um estado
   email: '',
@@ -96,7 +100,8 @@ export default reducer;
 - [ ] crie os actions creators necessários
 
 ### Exemplo de uma action:
-```export const SET_LOGIN = 'SET_LOGIN';
+```
+export const SET_LOGIN = 'SET_LOGIN';
 
 export const setLogin = (payload) => ({
   type: SET_LOGIN, payload,
@@ -109,7 +114,8 @@ export const setLogin = (payload) => ({
 - [ ] Utilize o connect
 
 ### Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
-```const mapDispatchToProps = (dispatch) => ({
+```
+const mapDispatchToProps = (dispatch) => ({
   dispatchSetValue: (email) => dispatch(setLogin(email)),
 });
 
