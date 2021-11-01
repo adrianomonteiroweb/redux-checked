@@ -141,9 +141,9 @@ export const setLogin = (payload) => ({
 ```
 
 *Nos seus componentes:*
-- [ ] Crie a função mapStateToProps
-- [ ] Crie a função mapDispatchToProps
-- [ ] Utilize o connect
+- [ ] Crie a função mapStateToProps.
+- [ ] Crie a função mapDispatchToProps.
+- [ ] Utilize o connect.
 
 ### Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
 ```js
