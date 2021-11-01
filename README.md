@@ -77,6 +77,7 @@ ReactDOM.render(
 ```
  npm install --save redux-devtools-extension
 ```
+*obs: Utilize a extensão chrome redux-devtools para verificar o estado na aplicação rodando.*
 
 ### Exemplo:
 ```js
