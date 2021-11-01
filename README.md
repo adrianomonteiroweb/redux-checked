@@ -5,47 +5,47 @@
 - [ ] Definir as actions iniciais para o projeto
 
 *Instalando o react-redux em seu projeto*
-- [ ] Use o comando:
+- Use o comando:
 ```
  npm install react-redux
 ```
 
 *Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
-- [ ] Use o comando abaixo para criar a pasta "redux" dentro de "src"
+- [ ] Use o comando abaixo para criar a pasta "redux" dentro de "src", se preferir.
 ```
  mkdir src/redux
 ```
-- [ ] Use o comando abaixo para criar a pasta "actions" dentro de "src/redux"
+- [ ] Use o comando abaixo para criar a pasta "actions" dentro de "src/redux", se preferir.
 ```
  mkdir src/redux/actions
 ```
-- [ ] Use o comando abaixo para criar a pasta "reducers" dentro de "src/redux"
+- [ ] Use o comando abaixo para criar a pasta "reducers" dentro de "src/redux", se preferir.
 ```
  mkdir src/redux/reducers
 ```
-- [ ] Use o comando abaixo para criar a pasta "store" dentro de "src/redux"
+- [ ] Use o comando abaixo para criar a pasta "store" dentro de "src/redux", se preferir.
 ```
  mkdir src/redux/store
 ```
 
 *Na pasta redux/actions, crie o arquivo index.js*
-- [ ] Use o comando abaixo, se preferir
+- [ ] Use o comando abaixo, se preferir.
 ```
  touch src/redux/actions/index.js
 ```
 
 *Na pasta redux/reducers, crie o arquivo index.js, além dos reducers iniciais que precisar*
-- [ ] Use o comando abaixo, se preferir
+- [ ] Use o comando abaixo, se preferir.
 ```
  touch src/redux/reducers/index.js
 ```
-- [ ] Use o comando abaixo, se preferir
+- [ ] Use o comando abaixo, se preferir.
 ```
  touch src/redux/reducers/outroReducer.js
 ```
 
 *Na pasta redux/store, crie o arquivo index.js*
-- [ ] Use o comando abaixo, se preferir
+- [ ] Use o comando abaixo, se preferir.
 ```
  touch src/redux/store/index.js
 ```
@@ -71,9 +71,9 @@ ReactDOM.render(
 ```
 
 *No arquivo redux/store/index.js:*
-- [ ] Importe o rootReducer e crie a store
-- [ ] instale o redux-devtoolsextension - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
-- [ ] Use o comando abaixo, se preferir
+- [ ] Importe o rootReducer e crie a store.
+- [ ] instale o redux-devtoolsextension - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools).
+- Use o comando abaixo, se preferir
 ```
  npm install --save redux-devtools-extension
 ```
@@ -91,7 +91,7 @@ export default store;
 ```
 
 *Na pasta redux/reducers:*
-- [ ] estruture o index.js para ser um rootReducer e combinar reducers criados
+- [ ] estruture o index.js para ser um rootReducer e combinar reducers criados.
 ### Exemplo de uso do combineReducers:
 ```
 import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
@@ -127,8 +127,8 @@ export default reducer;
 ```
 
 *Na pasta redux/actions:*
-- [ ] crie os actionTypes
-- [ ] crie os actions creators necessários
+- [ ] Crie os actionTypes.
+- [ ] Crie os actions creators necessários.
 
 ### Exemplo de uma action:
 ```
