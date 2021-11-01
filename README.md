@@ -7,7 +7,7 @@
 *Instalando o react-redux em seu projeto*
 - [x] npm install react-redux
 
-*Em o redux comum, use*
+*ou*
 - [x] npm install @reduxjs/toolkit
 
 *Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
@@ -29,12 +29,39 @@
 *No arquivo App.js ou Index.js*
 - [x] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
-*No arquivo store/index.js:*
+### exemplo no index: Provider vem do 'react-redux' e store do caminho "redux/store/index"
+```import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { Provider } from 'react-redux';
+import store from './redux/store/index';
+import App from './App';
+
+ReactDOM.render(
+  <Provider store={ store }>
+      <App />
+  </Provider>,
+  document.getElementById('root'),
+);
+```
+
+*No arquivo redux/store/index.js:*
 - [x] Importe o rootReducer e crie a store
-- [x] Configure o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+- [x] instale o redux-devtoolsextension: "npm install --save redux-devtools-extension" - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+
+### exemplo:
+```import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from '../redux/reducers';
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+
+export default store;
+```
 
 *Na pasta reducers:*
-- [x] extruture o index.js para ser um rootReducer
+- [x] extruture o index.js para ser um rootReducer e combinar reducers criados
 ### exemplo:
 ```import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
@@ -49,10 +76,28 @@ export default rootReducer;
 ```
 
 *Na pasta actions:*
-- [x] crie os actionTypes. exe: `const ADD_TO_CART = 'ADD_TO_CART';`
+- [x] crie os actionTypes
 - [x] crie os actions creators necessários
+
+### exemplo de uma action:
+```export const SET_LOGIN = 'SET_LOGIN';
+
+export const setLogin = (payload) => ({
+  type: SET_LOGIN, payload,
+});
+```
 
 *Nos componentes:*
 - [x] crie a função mapStateToProps
 - [x] crie a função mapDispatchToProps
 - [x] faça o connect
+
+### exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
+```const mapDispatchToProps = (dispatch) => ({
+  dispatchSetValue: (email) => dispatch(setLogin(email)),
+});
+
+const mapStateToProps = (state) => ({ email: state.user.email });
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
+```
