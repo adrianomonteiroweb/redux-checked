@@ -6,7 +6,7 @@
 
 - [ ] *Instalando o react-redux em seu projeto*
 - Use o comando:
-```
+```npm
  npm install react-redux
 ```
 
@@ -54,7 +54,7 @@
 - [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
 ### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index"
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -79,7 +79,7 @@ ReactDOM.render(
 ```
 
 ### Exemplo:
-```
+```js
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -93,7 +93,7 @@ export default store;
 *Na pasta redux/reducers:*
 - [ ] estruture o index.js para ser um rootReducer e combinar reducers criados.
 ### Exemplo de uso do combineReducers:
-```
+```js
 import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
 import reducer1 from './reducer1';
 import reducer2 from './reducer2';
@@ -107,7 +107,7 @@ export default rootReducer;
 ```
 
 ### Exemplo de reducer:
-```
+```js
 import { SET_LOGIN } from '../actions'; // importa a action
 
 const INITIAL_STATE = { // inicia um estado
@@ -131,7 +131,7 @@ export default reducer;
 - [ ] Crie os actions creators necessários.
 
 ### Exemplo de uma action:
-```
+```js
 export const SET_LOGIN = 'SET_LOGIN';
 
 export const setLogin = (payload) => ({
@@ -145,7 +145,7 @@ export const setLogin = (payload) => ({
 - [ ] Utilize o connect
 
 ### Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente
-```
+```js
 const mapDispatchToProps = (dispatch) => ({
   dispatchSetValue: (email) => dispatch(setLogin(email)),
 });
