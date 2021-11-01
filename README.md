@@ -5,23 +5,50 @@
 - [ ] Definir as actions iniciais para o projeto
 
 *Instalando o react-redux em seu projeto*
-- [ ] npm install react-redux
+- [ ] Use o comando:
+```
+ npm install react-redux
+```
 
 *Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
-- [ ] Use o comando: "mkdir src/redux" para criar a pasta "redux" dentro de "src"
-- [ ] Use o comando: "mkdir src/redux/actions" para criar a pasta "actions" dentro de "src/redux"
-- [ ] Use o comando: "mkdir src/redux/reducers" para criar a pasta "reducers" dentro de "src/redux"
-- [ ] Use o comando: "mkdir src/redux/store" para criar a pasta "store" dentro de "src/redux"
+- [ ] Use o comando abaixo para criar a pasta "redux" dentro de "src"
+```
+ mkdir src/redux
+```
+- [ ] Use o comando abaixo para criar a pasta "actions" dentro de "src/redux"
+```
+ mkdir src/redux/actions
+```
+- [ ] Use o comando abaixo para criar a pasta "reducers" dentro de "src/redux"
+```
+ mkdir src/redux/reducers
+```
+- [ ] Use o comando abaixo para criar a pasta "store" dentro de "src/redux"
+```
+ mkdir src/redux/store
+```
 
 *Na pasta redux/actions, crie o arquivo index.js*
-- [ ] Use o comando:  "touch src/redux/actions/index.js", se preferir
+- [ ] Use o comando abaixo, se preferir
+```
+ touch src/redux/actions/index.js
+```
 
 *Na pasta redux/reducers, crie o arquivo index.js, além dos reducers iniciais que precisar*
-- [ ] Use o comando:  "touch src/redux/reducers/index.js", se preferir
-- [ ] Use o comando:  "touch src/redux/reducers/outroReducer.js", se preferir
+- [ ] Use o comando abaixo, se preferir
+```
+ touch src/redux/reducers/index.js
+```
+- [ ] Use o comando abaixo, se preferir
+```
+ touch src/redux/reducers/outroReducer.js
+```
 
 *Na pasta redux/store, crie o arquivo index.js*
-- [ ] Use o comando:  "touch src/redux/store/index.js", se preferir
+- [ ] Use o comando abaixo, se preferir
+```
+ touch src/redux/store/index.js
+```
 
 *No arquivo App.js ou Index.js*
 - [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
@@ -45,7 +72,11 @@ ReactDOM.render(
 
 *No arquivo redux/store/index.js:*
 - [ ] Importe o rootReducer e crie a store
-- [ ] instale o redux-devtoolsextension: "npm install --save redux-devtools-extension" - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+- [ ] instale o redux-devtoolsextension - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+- [ ] Use o comando abaixo, se preferir
+```
+ npm install --save redux-devtools-extension
+```
 
 ### Exemplo:
 ```
