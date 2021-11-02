@@ -151,7 +151,7 @@ const mapDispatchToProps = (dispatch) => ({
   dispatchSetValue: (email) => dispatch(setLogin(email)),
 });
 
-const mapStateToProps = (state) => ({ email: state.user.email });
+const mapStateToProps = (state) => ({ email: state.reducer1.email });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 ```
