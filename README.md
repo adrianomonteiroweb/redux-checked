@@ -91,6 +91,12 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 export default store;
 ```
 
+- [ ] *Instale o redux-thunk*
+
+```
+  npm i redux-thunk
+```
+
 *Na pasta redux/reducers:*
 - [ ] estruture o index.js para ser um rootReducer e combinar reducers criados.
 ### Exemplo de uso do combineReducers:
