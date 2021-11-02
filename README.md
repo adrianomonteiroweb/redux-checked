@@ -98,7 +98,7 @@ export default store;
 ```
 
 *Na pasta redux/reducers:*
-- [ ] estruture o index.js para ser um rootReducer e combinar reducers criados.
+- [ ] Estruture o index.js para ser um rootReducer e combinar reducers criados. Crie primeiro seus arquivos reducers, como os de exemplo reducer1.js e reducer2.js para depois importá-los para o index.js.
 ### Exemplo de uso do combineReducers:
 ```js
 import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
@@ -113,7 +113,7 @@ const rootReducer = combineReducers({ // combinando dois reducers importados do 
 export default rootReducer;
 ```
 
-### Exemplo de reducer:
+### Exemplo de reducer, como um reducer1.js:
 ```js
 import { SET_LOGIN } from '../actions'; // importa a action
 
@@ -121,16 +121,16 @@ const INITIAL_STATE = { // inicia um estado
   email: '',
 };
 
-const reducer = (state = INITIAL_STATE, action) => {
+const reducer1 = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case SET_LOGIN:
-    return { ...state, email: action.payload };
+    return { ...state, email: action.payload }; // seta o email quando a action setLogin for acionada.
   default:
     return state;
   }
 };
 
-export default reducer;
+export default reducer1;
 ```
 
 *Na pasta redux/actions:*
