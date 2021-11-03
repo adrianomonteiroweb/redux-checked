@@ -1,53 +1,25 @@
 # Checklist React-Redux
 
 *Antes de começar*
-- [ ] Definir como o estado global será iniciado
-- [ ] Definir as actions iniciais para o projeto
+- [ ] Definir como o estado global será iniciado.
+- [ ] Definir as actions iniciais para o projeto.
 
 - [ ] *Instalando o react-redux em seu projeto*
 - Use o comando:
-```npm
+```
  npm install react-redux
 ```
 
-- [ ] *Organizando as pastas em "src". Use o terminal se preferir, como a seguir:*
+- [ ] *Organizando as pastas em "src". A ideia é ter em "src" a pasta redux, e dentro dela as pastas actions, reducers e store.*
 - Use o comando abaixo para criar a pasta "redux" dentro de "src", se preferir.
 ```
- mkdir src/redux
-```
-- Use o comando abaixo para criar a pasta "actions" dentro de "src/redux", se preferir.
-```
- mkdir src/redux/actions
-```
-- Use o comando abaixo para criar a pasta "reducers" dentro de "src/redux", se preferir.
-```
- mkdir src/redux/reducers
-```
-- Use o comando abaixo para criar a pasta "store" dentro de "src/redux", se preferir.
-```
- mkdir src/redux/store
+ mkdir src/redux && mkdir src/redux/actions && mkdir src/redux/reducers && mkdir src/redux/store
 ```
 
- - [ ] *Na pasta redux/actions, crie o arquivo index.js*
+ - [ ] *Na pastas actions, reducers e store, em redux, crie para cada um arquivo index.js*
 - Use o comando abaixo, se preferir.
 ```
- touch src/redux/actions/index.js
-```
-
-- [ ] *Na pasta redux/reducers, crie o arquivo index.js, além dos reducers iniciais que precisar*
-- Use o comando abaixo, se preferir.
-```
- touch src/redux/reducers/index.js
-```
-- Use o comando abaixo, se preferir.
-```
- touch src/redux/reducers/outroReducer.js
-```
-
-- [ ] *Na pasta redux/store, crie o arquivo index.js*
-- Use o comando abaixo, se preferir.
-```
- touch src/redux/store/index.js
+ touch src/redux/actions/index.js && touch src/redux/reducers/index.js && touch src/redux/store/index.js
 ```
 
 *No arquivo App.js ou Index.js*
