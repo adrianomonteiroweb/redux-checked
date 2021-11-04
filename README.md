@@ -136,6 +136,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 
 *Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
 
-|           Autor           |  Contribuições |       Contribuições      |
-|:-------------------------:|:--------------:|:------------------------:|
-| Adriano Monteiro  | Ivan  | Marcelo Pantoja |
+|           Autor           |          Contribuições           |
+|:-------------------------:|:--------------------------------:|
+|      Adriano Monteiro     |       Ivan      Marcelo Pantoja  |
