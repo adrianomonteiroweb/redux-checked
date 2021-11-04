@@ -138,4 +138,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 
 |           Autor           |          Contribuições           |
 |:-------------------------:|:--------------------------------:|
-|      Adriano Monteiro     |       Ivan      Marcelo Pantoja  |
+|      Adriano Monteiro     |       Ivan,      Marcelo Pantoja  |
