@@ -138,4 +138,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 
 |           Autor           |  Contribuições |       Contribuições      |
 |:-------------------------:|:--------------:|:------------------------:|
-| Adriano Monteiro ![title](https://avatars.githubusercontent.com/u/47261292?v=4 =100x)  #GitHub | Ivan   #GitHub | Marcelo Pantoja  #GitHub |
+| Adriano Monteiro ![title](https://avatars.githubusercontent.com/u/47261292?v=4){ width=100x }  #GitHub | Ivan   #GitHub | Marcelo Pantoja  #GitHub |
