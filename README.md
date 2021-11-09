@@ -30,13 +30,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Provider } from 'react-redux';
-import store from './redux/store/index';
+import { Provider } from 'react-redux'; // import o Provider de 'react-redux'.
+import store from './redux/store/index'; // import o store criado em '/redux/store/index'.
 import App from './App';
-
-ReactDOM.render(
+// abaixo, englobe o 'App' em seu 'Provider' passando o parâmetro store. Disponibilizando assim um estado de forma global para sua aplicação.
+ReactDOM.render( 
   <Provider store={ store }>
-      <App />
+      <App /> 
   </Provider>,
   document.getElementById('root'),
 );
@@ -53,10 +53,10 @@ ReactDOM.render(
 
 ### Exemplo:
 ```js
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from '../redux/reducers';
+import { createStore, applyMiddleware } from 'redux'; // import além de 'createStore', para criar sua store, a 'applyMiddleware' de 'redux' para que sua aplicação consiga trabalhar actions de forma assíncrona.
+import thunk from 'redux-thunk'; // importando também thunk de 'redux-thunk', ativando dentro da 'applyMiddleWare' no seu 'composeWithDevTools'.
+import { composeWithDevTools } from 'redux-devtools-extension'; // junto a extensão em seu chrome, poderá trabalhar e monitorar suas actions e estado em tempo real.
+import rootReducer from '../redux/reducers'; // você importará rootReducer de 'redux/reducers' quando tiver criado. Ele combinará em 1 reducer principal todos os seus reducers necessários. 
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
@@ -74,6 +74,7 @@ export default store;
 ### Exemplo de uso do combineReducers:
 ```js
 import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
+// import , quando criados, os reducers necessários para combiná-los aqui.
 import reducer1 from './reducer1';
 import reducer2 from './reducer2';
 
@@ -85,7 +86,7 @@ const rootReducer = combineReducers({ // combinando dois reducers importados do 
 export default rootReducer;
 ```
 
-### Exemplo de reducer, como um reducer1.js:
+### Exemplo de reducer, como um reducer1.js. Nesse exemplo teremos 2 (reducer1 e reducer2).
 ```js
 import { SET_LOGIN } from '../actions'; // importa a action
 
@@ -96,9 +97,9 @@ const INITIAL_STATE = { // inicia um estado
 const reducer1 = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case SET_LOGIN:
-    return { ...state, email: action.payload }; // seta o email quando a action setLogin for acionada.
+    return { ...state, email: action.payload }; // seta o email quando a action setLogin for acionada em alguma página ou componente da aplicação.
   default:
-    return state;
+    return state; // caso a action.type não for a 'SET_LOGIN', ela mantém o estado sem alteração retornando o próprio 'state'.
   }
 };
 
@@ -111,9 +112,9 @@ export default reducer1;
 
 ### Exemplo de uma action:
 ```js
-export const SET_LOGIN = 'SET_LOGIN';
+export const SET_LOGIN = 'SET_LOGIN'; // Define o type da action.
 
-export const setLogin = (payload) => ({
+export const setLogin = (payload) => ({ // Recebe em payload o novo objecto vindo via parâmetro da execução da action 'setLogin' em algum ponto da aplicação.
   type: SET_LOGIN, payload,
 });
 ```
@@ -132,11 +133,25 @@ const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', 
 
 const mapStateToProps = (state) => ({ email: state.reducer1.email }); // Trás para o contexto de estado da página ou componente o estado inicial criado anteriormente. na chave 'email:', armazenando o estado 'state.reducer1.email'.
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // usamos o connect para conectar ao banco de dados nossa página ou componente. obs: caso você só precise ler, utilize apenas 'connect(mapStateToProps)(MyComponent)', caso precise apenas reescrever, use o null, para evitar erros em sua aplicação: 'connect(null, mapDispatchToProps)(MyComponent)'.
 ```
 
 *Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
 
-|           Autor           |          Contribuições           |
-|:-------------------------:|:--------------------------------:|
-|      Adriano Monteiro     |       Ivan,      Marcelo Pantoja  |
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Autor</th>
+        <th cols="2">Contribuições</th>
+      </tr>
+    </thhead>
+    <tbody>
+      <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/47261292?v=4" alt="Adriano Monteiro" width="100x" /></td>
+        <td><img src="https://avatars.githubusercontent.com/u/83843144?v=4" alt="Marcelo Pantoja" width="100x" /></td>
+        <td><img src="https://avatars.githubusercontent.com/u/66140620?v=4" alt="Ivan" width="100x" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
