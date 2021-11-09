@@ -125,7 +125,7 @@ export const setLogin = (payload) => ({ // Recebe em payload o novo objecto vind
 - [ ] Utilize o connect.
 
 ### Agora sim, você pode começar a ler e rescrever seu estado inicial criado em suas pages e components usando o Connect.
-*Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux" e é necesário a importação da action setLogin criada anteriormente*
+*Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux", necesária também a importação da action setLogin criada anteriormente em actions*
 ```js
 const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', que é uma arrow function, para o contexto de estado da página ou componente. A action 'setLogin' criada anteriormente, responsável por reescrever o estado inicial 'email'.
   dispatchSetValue: (email) => dispatch(setLogin(email)),
