@@ -143,7 +143,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // usa
     <thead>
       <tr>
         <th>Autor</th>
-        <th cols="2">Contribuições</th>
+        <th cols=2>Contribuições</th>
       </tr>
     </thhead>
     <tbody>
@@ -151,6 +151,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // usa
         <td><img src="https://avatars.githubusercontent.com/u/47261292?v=4" alt="Adriano Monteiro" width="100x" /></td>
         <td><img src="https://avatars.githubusercontent.com/u/83843144?v=4" alt="Marcelo Pantoja" width="100x" /></td>
         <td><img src="https://avatars.githubusercontent.com/u/66140620?v=4" alt="Ivan" width="100x" /></td>
+      </tr>
+      <tr>
+        <td>Adriano Monteiro</td>
+        <td>Marcelo Pantoja</td>
+        <td>Ivan</td>
       </tr>
     </tbody>
   </table>
