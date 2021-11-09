@@ -157,6 +157,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // usa
         <td><a href="https://www.linkedin.com/in/marcelo-pantoja-a71a97112/" target="_blank">Marcelo Pantoja</a></td>
         <td><a href="https://www.linkedin.com/in/ivan-silva-4ba014221/" target="_blank">Ivan</a></td>
       </tr>
+      <tr>
+        <td><a href="https://www.linkedin.com/in/adrianomonteiroweb/" target="_blank">LinkedIn</a></td>
+        <td><a href="https://github.com/Pantoja42" target="_blank">GitHub</a></td>
+        <td><a href="https://github.com/Ivandosss" target="_blank">GitHub</a></td>
+      </tr>
     </tbody>
   </table>
 </div>
