@@ -44,7 +44,7 @@ ReactDOM.render(
 
 *No arquivo redux/store/index.js:*
 - [ ] Importe o rootReducer e crie a store.
-- [ ] instale o redux-devtoolsextension - mais informações: [Redux DevTools](https://github.com/reduxjs/redux-devtools).
+- [ ] instale o redux-devtoolsextension. - Mais informações em: [Redux DevTools](https://github.com/reduxjs/redux-devtools).
 - Use o comando abaixo, se preferir
 ```
  npm install --save redux-devtools-extension
@@ -70,21 +70,7 @@ export default store;
 ```
 
 *Na pasta redux/reducers:*
-- [ ] Estruture o index.js para ser um rootReducer e combinar reducers criados. Crie primeiro seus arquivos reducers, como os de exemplo reducer1.js e reducer2.js para depois importá-los para o index.js.
-### Exemplo de uso do combineReducers:
-```js
-import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
-// import , quando criados, os reducers necessários para combiná-los aqui.
-import reducer1 from './reducer1';
-import reducer2 from './reducer2';
-
-const rootReducer = combineReducers({ // combinando dois reducers importados do mesmo diretório
-  reducer1,
-  reducer2,
-});
-
-export default rootReducer;
-```
+- [ ] Crie primeiro seus arquivos reducers, como os de exemplo reducer1.js e reducer2.js para depois importá-los para o index.js. Estruture o index.js para ser um rootReducer e combinar reducers criados.
 
 ### Exemplo de reducer, como um reducer1.js. Nesse exemplo teremos 2 (reducer1 e reducer2).
 ```js
@@ -106,6 +92,21 @@ const reducer1 = (state = INITIAL_STATE, action) => {
 export default reducer1;
 ```
 
+### Exemplo de uso do combineReducers:
+```js
+import { combineReducers } from 'redux'; // importe o combineReducers para unificar quantos reducers precisar
+// import , quando criados, os reducers necessários para combiná-los aqui.
+import reducer1 from './reducer1';
+import reducer2 from './reducer2';
+
+const rootReducer = combineReducers({ // combinando dois reducers importados do mesmo diretório
+  reducer1,
+  reducer2,
+});
+
+export default rootReducer;
+```
+
 *Na pasta redux/actions:*
 - [ ] Crie os actionTypes.
 - [ ] Crie os actions creators necessários.
@@ -125,7 +126,7 @@ export const setLogin = (payload) => ({ // Recebe em payload o novo objecto vind
 - [ ] Utilize o connect.
 
 ### Agora sim, você pode começar a ler e rescrever seu estado inicial criado em suas pages e components usando o Connect.
-*Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux", necesária também a importação da action setLogin criada anteriormente em actions*
+*Exemplo de connect, mapDispachToProps e mapStateToProps: import connect de "react-redux", necesária também a importação da action setLogin criada anteriormente em actions!*
 ```js
 const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', que é uma arrow function, para o contexto de estado da página ou componente. A action 'setLogin' criada anteriormente, responsável por reescrever o estado inicial 'email'.
   dispatchSetValue: (email) => dispatch(setLogin(email)),
