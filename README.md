@@ -1,10 +1,10 @@
 # Checklist React-Redux
 
-*Antes de começar*
+*Antes de começar:*
 - [ ] Definir como o estado global será iniciado.
 - [ ] Definir as actions iniciais para o projeto.
 
-- [ ] *Instalando o react-redux em seu projeto*
+- [ ] *Instalando o react-redux em seu projeto.*
 - Use o comando:
 ```
  npm install react-redux
@@ -16,16 +16,16 @@
  mkdir src/redux && mkdir src/redux/actions && mkdir src/redux/reducers && mkdir src/redux/store
 ```
 
- - [ ] *Na pastas actions, reducers e store, em redux, crie para cada um arquivo index.js*
+ - [ ] *Nas pastas actions, reducers e store, em redux, crie para cada um arquivo index.js.*
 - Use o comando abaixo, se preferir.
 ```
  touch src/redux/actions/index.js && touch src/redux/reducers/index.js && touch src/redux/store/index.js
 ```
 
-*No arquivo App.js ou Index.js*
+*No arquivo App.js ou Index.js:*
 - [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
-### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index"
+### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index:"
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -63,7 +63,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 export default store;
 ```
 
-- [ ] *Instale o redux-thunk*
+- [ ] *Instale o redux-thunk.*
 
 ```
   npm i redux-thunk
