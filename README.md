@@ -143,8 +143,23 @@ const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', 
 
 const mapStateToProps = (state) => ({ email: state.reducer1.email }); // Trás para o contexto de estado da página ou componente o estado inicial criado anteriormente. na chave 'email:', armazenando o estado 'state.reducer1.email'.
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado. Obs: Caso você só precise ler, utilize apenas 'connect(mapStateToProps)(MyComponent)'. Caso precise apenas reescrever, use o null, para evitar erros em sua aplicação: 'connect(null, mapDispatchToProps)(MyComponent)'. Mantenha essa ordem 'connect(mapStateToProps)(MyComponent), o primeiro parâmetro para mapStateToProps e o segundo para mapDispatchToProps'.
+export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado.
 ```
+*Obs: Caso você só precise ler o estado, utilize apenas:*
+```js
+const mapStateToProps = (state) => ({ email: state.reducer1.email }); // Trás para o contexto de estado da página ou componente o estado inicial criado anteriormente. na chave 'email:', armazenando o estado 'state.reducer1.email'.
+
+export default connect(mapStateToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado.
+```
+*Caso precise apenas reescrever o estado, use o null, para evitar erros em sua aplicação:*
+```js
+const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', que é uma arrow function, para o contexto de estado da página ou componente. A action 'setLogin' criada anteriormente, responsável por reescrever o estado inicial 'email'.
+  dispatchSetValue: (email) => dispatch(setLogin(email)),
+});
+
+export default connect(null, mapDispatchToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado.
+```
+*Mantenha essa ordem no connect(parâmetro1(Ler), parâmetro2(Reescrever)), o primeiro parâmetro para mapStateToProps e o segundo para mapDispatchToProps'.*
 
 *Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
 
