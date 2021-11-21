@@ -159,7 +159,7 @@ const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', 
 
 export default connect(null, mapDispatchToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado.
 ```
-*Mantenha essa ordem no connect(parâmetro1(Ler), parâmetro2(Reescrever)), o primeiro parâmetro para mapStateToProps e o segundo para mapDispatchToProps'.*
+*Mantenha essa ordem no connect(), o primeiro parâmetro para mapStateToProps e o segundo para mapDispatchToProps'.*
 
 *Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
 
