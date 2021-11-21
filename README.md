@@ -9,7 +9,7 @@ Ex:
  }
 ```
 - [ ] Definir as actions iniciais para o projeto.
-- EX: Atualizar email: updateEmail.
+- EX: Atualizar email: setLogin.
 
 - [ ] *Instalando o react-redux em seu projeto.*
 - Use o comando:
