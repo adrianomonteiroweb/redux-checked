@@ -143,7 +143,7 @@ const mapDispatchToProps = (dispatch) => ({ // Cria a chave 'dispatchSetValue', 
 
 const mapStateToProps = (state) => ({ email: state.reducer1.email }); // Trás para o contexto de estado da página ou componente o estado inicial criado anteriormente. na chave 'email:', armazenando o estado 'state.reducer1.email'.
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // usamos o connect para conectar ao banco de dados nossa página ou componente. obs: caso você só precise ler, utilize apenas 'connect(mapStateToProps)(MyComponent)', caso precise apenas reescrever, use o null, para evitar erros em sua aplicação: 'connect(null, mapDispatchToProps)(MyComponent)'.
+export default connect(mapStateToProps, mapDispatchToProps)(MyComponent); // Usamos o connect para conectar nossa página ou componente ao estado. Obs: Caso você só precise ler, utilize apenas 'connect(mapStateToProps)(MyComponent)'. Caso precise apenas reescrever, use o null, para evitar erros em sua aplicação: 'connect(null, mapDispatchToProps)(MyComponent)'. Mantenha essa ordem 'connect(mapStateToProps)(MyComponent), o primeiro parâmetro para mapStateToProps e o segundo para mapDispatchToProps'.
 ```
 
 *Este Checklist foi baseado em outro de uma das turmas da Trybe. Faça bom uso!*
