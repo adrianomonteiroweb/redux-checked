@@ -78,6 +78,19 @@ ReactDOM.render(
 );
 ```
 
+*Na pasta redux/actions:*
+- [ ] Crie os actionTypes.
+- [ ] Crie os actions creators necessários.
+
+### Exemplo de uma action:
+```js
+export const SET_LOGIN = 'SET_LOGIN'; // Define o type da action.
+
+export const setLogin = (payload) => ({ // Recebe em payload o novo objecto vindo via parâmetro da execução da action 'setLogin' em algum ponto da aplicação.
+  type: SET_LOGIN, payload,
+});
+```
+
 *Na pasta redux/reducers:*
 - [ ] Crie primeiro seus arquivos reducers, como os de exemplo reducer1.js e reducer2.js para depois importá-los para o index.js. Estruture o index.js para ser um rootReducer e combinar reducers criados.
 
@@ -114,19 +127,6 @@ const rootReducer = combineReducers({ // combinando dois reducers importados do 
 });
 
 export default rootReducer;
-```
-
-*Na pasta redux/actions:*
-- [ ] Crie os actionTypes.
-- [ ] Crie os actions creators necessários.
-
-### Exemplo de uma action:
-```js
-export const SET_LOGIN = 'SET_LOGIN'; // Define o type da action.
-
-export const setLogin = (payload) => ({ // Recebe em payload o novo objecto vindo via parâmetro da execução da action 'setLogin' em algum ponto da aplicação.
-  type: SET_LOGIN, payload,
-});
 ```
 
 *Nos seus componentes:*
