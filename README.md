@@ -179,7 +179,7 @@ export default connect(null, mapDispatchToProps)(MyComponent); // Usamos o conne
       </tr>
       <tr>
         <td style="text-align: center">
-          <a href="https://www.linkedin.com/in/adrianomonteiroweb/" target="_blank">Adriano Monteiro</a>
+          <a href="https://www.linkedin.com/in/adrianomonteirodev/" target="_blank">Adriano Monteiro</a>
         </td>
         <td style="text-align: center">
           <a href="https://www.linkedin.com/in/marcelo-pantoja-a71a97112/" target="_blank">Marcelo Pantoja</a>
@@ -190,7 +190,7 @@ export default connect(null, mapDispatchToProps)(MyComponent); // Usamos o conne
       </tr>
       <tr>
         <td style="text-align: center">
-          <a href="https://www.linkedin.com/in/adrianomonteiroweb/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/adrianomonteirodev/" target="_blank">LinkedIn</a>
         </td>
         <td style="text-align: center">
           <a href="https://github.com/Pantoja42" target="_blank">GitHub</a>
