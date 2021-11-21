@@ -1,8 +1,15 @@
 # Checklist React-Redux
 
 *Antes de começar:*
-- [ ] Definir como o estado global será iniciado.
+- [ ] Planejar como o estado global será iniciado.
+Ex:
+```js
+ {
+   email: '',
+ }
+```
 - [ ] Definir as actions iniciais para o projeto.
+- EX: Atualizar email: updateEmail.
 
 - [ ] *Instalando o react-redux em seu projeto.*
 - Use o comando:
@@ -20,26 +27,6 @@
 - Use o comando abaixo, se preferir.
 ```
  touch src/redux/actions/index.js && touch src/redux/reducers/index.js && touch src/redux/store/index.js
-```
-
-*No arquivo App.js ou Index.js:*
-- [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
-
-### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index:"
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { Provider } from 'react-redux'; // import o Provider de 'react-redux'.
-import store from './redux/store/index'; // import o store criado em '/redux/store/index'.
-import App from './App';
-// abaixo, englobe o 'App' em seu 'Provider' passando o parâmetro store. Disponibilizando assim um estado de forma global para sua aplicação.
-ReactDOM.render( 
-  <Provider store={ store }>
-      <App /> 
-  </Provider>,
-  document.getElementById('root'),
-);
 ```
 
 *No arquivo redux/store/index.js:*
@@ -67,6 +54,26 @@ export default store;
 
 ```
   npm i redux-thunk
+```
+
+*No arquivo App.js ou Index.js:*
+- [ ] Defina o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
+
+### Exemplo no index: import o Provider do 'react-redux' e store do caminho "redux/store/index:"
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { Provider } from 'react-redux'; // import o Provider de 'react-redux'.
+import store from './redux/store/index'; // import o store criado em '/redux/store/index'.
+import App from './App';
+// abaixo, englobe o 'App' em seu 'Provider' passando o parâmetro store. Disponibilizando assim um estado de forma global para sua aplicação.
+ReactDOM.render( 
+  <Provider store={ store }>
+      <App /> 
+  </Provider>,
+  document.getElementById('root'),
+);
 ```
 
 *Na pasta redux/reducers:*
