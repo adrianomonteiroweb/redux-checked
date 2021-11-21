@@ -1,4 +1,4 @@
-# Checklist React-Redux
+# Checklist React-Redux - Como instalar e configurar o Redux em uma aplicação React.js.
 
 *Antes de começar:*
 - [ ] Planejar como o estado global será iniciado.
