@@ -17,6 +17,8 @@ Ex:
  npm install react-redux
 ```
 
+*Lembrete: Para colar o comando no terminal use: Ctrl + Shift + V*
+
 - [ ] *Organizando as pastas em "src". A ideia é ter em "src" a pasta redux, e dentro dela as pastas actions, reducers e store.*
 - Use o comando abaixo para criar a pasta "redux" dentro de "src", se preferir.
 ```
